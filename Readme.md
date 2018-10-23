@@ -56,7 +56,7 @@ Rellena el formulario
 
  ## Las reglas: 
 
-* El proyecto exige el trabajo conjunto de Frontend y UX, los squads se harán de 4-5 personas..
+* El proyecto exige el trabajo conjunto de Frontend y UX, los squads se harán de 4-5 personas.
 
 * El proyecto tiene una duración de 36 horas. Planifiquen de acuerdo a esto usando metodologías ágiles.
 
