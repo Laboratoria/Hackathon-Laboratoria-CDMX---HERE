@@ -4,6 +4,7 @@ import {Row, Input, Button, Col} from 'react-materialize';
 
 const Form = () => (
     <div className='inputContainer'>
+    
                 <form>
                     <Row className="white-background"> 
                         <Col s={12} m={12} l={12}>
