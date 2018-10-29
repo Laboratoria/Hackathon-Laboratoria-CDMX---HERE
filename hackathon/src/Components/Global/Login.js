@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Row, Input, Button, Col} from 'react-materialize';
 import Firebase from '../../config';
+// eslint-disable-next-line
 import firebase from 'firebase';
 import {Redirect} from 'react-router-dom';
 import './Login.css';
