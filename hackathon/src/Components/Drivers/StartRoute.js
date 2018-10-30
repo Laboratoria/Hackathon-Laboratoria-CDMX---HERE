@@ -2,6 +2,8 @@ import React from 'react';
 import {Icon, Navbar, NavItem, Dropdown, Button} from 'react-materialize';
 import firebase from 'firebase';
 import {Link} from 'react-router-dom';
+import Map from '../Map/Map';
+import Chat from '../Parents/Chat';
 
 const startRoute = () => (
     <div>
@@ -21,7 +23,9 @@ const startRoute = () => (
     <p>Próximo Destino: Dresde 4-1, Juarez</p>
     <p><Icon tiny className="actual">brightness_1</Icon> Alumnos Actuales: 0 </p>
     <p><Icon tiny className="pending">brightness_1</Icon> Alumnos Pendientes: 10 </p>
+    <Map />
     </div>
+    <Chat />
     </div>
 )
 

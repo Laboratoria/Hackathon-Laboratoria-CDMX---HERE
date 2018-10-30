@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {Card, Row, Col} from 'react-materialize';
 import './LandingPage.css';
-import Chat from '../Parents/Chat';
 
 const landingPage = () => (
     <div>
@@ -40,7 +39,6 @@ const landingPage = () => (
             </Col>
         </Row>
         </section>
-        <Chat />
     </div>
 )
 

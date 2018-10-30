@@ -2,6 +2,8 @@ import React from 'react';
 import {Icon, Navbar, NavItem, Dropdown, Button} from 'react-materialize';
 import firebase from 'firebase';
 import {Link} from 'react-router-dom';
+import Chat from '../Parents/Chat';
+import Map from '../Map/Map';
 
 const startRoute = () => (
     <div>
@@ -19,8 +21,11 @@ const startRoute = () => (
     <div className='inputContainer'>
     <p>Ruta 002 - Colegio Amado Nervo</p>
     <p>Próximo Destino: Dresde 4-1, Juarez</p>
+    <Map />
     </div>
+    <Chat />
     </div>
+    
 )
 
 export default startRoute

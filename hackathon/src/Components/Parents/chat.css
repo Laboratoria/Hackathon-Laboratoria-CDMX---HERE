@@ -11,3 +11,8 @@
 .chatMessages p {
     margin-bottom: -10%;
 }
+
+.chat-btn {
+    margin-top: 45%;
+    margin-left: 2%;
+}

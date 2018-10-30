@@ -39,6 +39,7 @@ class Chat extends Component {
 
         render() {
         return (
+            <div className="chat-btn">
     <SideNav
     trigger={<Button>Chat</Button>}
     options={{ closeOnClick: false }}
@@ -49,6 +50,7 @@ class Chat extends Component {
             <Button onClick={this.handleOnSubmit}>submit</Button>
        </div>
   </SideNav>
+  </div>
         );
     };
 }
