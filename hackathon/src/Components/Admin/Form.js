@@ -1,53 +1,47 @@
-import React from 'react';
-// eslint-disable-next-line
-import {Row, Input, Button, Col} from 'react-materialize';
+import React, {Component} from 'react';
+import {Row, Input, Button, Modal, Col} from 'react-materialize';
+import $ from 'jquery';
 
-const Form = () => (
-    <div className='inputContainer'>
-    
-                <form>
-                    <Row className="white-background"> 
-                        <Col s={12} m={12} l={12}>
-                        <Input className='inputHover' s={10}  m={10} l={10} label="School Code" name="school-code" type="text"></Input>
-                        </Col>
-                    </Row>
-                    <Row className="white-background"> 
-                        <Col s={12} m={12} l={12}>
-                        <Input className='inputHover' s={10}  m={10} l={10} label="Student's Full name" name="student-full-name" type="text"></Input>
-                        </Col>
-                    </Row>
-                    <Row className="white-background">
-                    <Col s={12} m={12} l={12}>
-                        <Input className='inputHover' s={10}  m={10} l={10} label="Tutor's Full Name" name="tutor-full-name" type="text"></Input>
+class Form extends Component {
+    constructor() {
+        super();
+        this.state = {
+            email: '',
+            password: '',
+        }
+    }
+    render() {
+        return(
+    <div>
+        <Row>
+            <Input placeholder="Placeholder" s={6} label="First Name" />
+            <Input s={6} label="Last Name" />
+            <Input s={12} label="disabled" defaultValue="I am not editable" disabled />
+            <Input type="password" label="password" s={12} />
+            <Input type="email" label="Email" s={12} />
+        </Row>
+        <Row>
+            <div>
+        <Button onClick={() => {
+            $('#foo').modal('openModal')
+        }}>Registrar</Button>
+        <Modal
+            id='foo'
+            header='Modal Header'>
+                <Row>
+                    <Col>
+                        <h5>Registra Nueva Escuela</h5>
+                        <Input type="email" label="email" name="email"/>
+                        <Input type="password" label="password" name="email"/>
+                        <Button>Confirmar</Button>
                     </Col>
-                    </Row >
-                    <Row className="white-background">
-                    <Col s={12} m={12} l={12}>
-                        <Input className='inputHover' s={10}  m={10} l={10} label="Student ID" name="student-ID" type="text"></Input>
-                    </Col>
-                    </Row >
-                    <Row className="white-background">
-                    <Col s={12} m={12} l={12}>
-                        <Input className='inputHover' s={10}  m={10} l={10} label="Email" name='email' type='email' validate></Input>
-                    </Col>
-                    </Row >
-                    <Row className="white-background">
-                    <Col s={12} m={12} l={12}>
-                        <Input className='inputHover' s={10}  m={10} l={10} label="New Password" name="new-password" type="password" validate></Input>
-                    </Col>
-                    </Row >
-                    <Row className="white-background">
-                    <Col s={12} m={12} l={12}>
-                        <Input className='inputHover' s={10}  m={10} l={10} label="Confirm Password" name="confirm-password" type="password" validate></Input>
-                    </Col>
-                    </Row >
-                    <Row className="white-background">
-                    <Col s={12} m={12} l={12} className='center'>
-                        <Button type='submit' s={10}  m={10} l={10} waves='light' className="signUpButton">Submit</Button>
-                        </Col>
-                    </Row>
-        </form>
+                </Row>
+        </Modal>
+        </div>
+        </Row>
     </div>
-)
+        )
+    }
+}
 
 export default Form

@@ -1,0 +1,11 @@
+.container {
+    margin-top: 15%;
+}
+
+.tabs .tab a {
+    color: black
+}
+
+.tabs .tab a.active {
+    color: #b6b8c3
+}

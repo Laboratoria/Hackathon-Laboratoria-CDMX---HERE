@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {SideNav, SideNavItem, Button, Input, Footer} from 'react-materialize'
+import {SideNav, SideNavItem, Button, Input} from 'react-materialize'
 import ChatMessages from './ChatMessages';
 import firebase from 'firebase';
 import './chat.css';

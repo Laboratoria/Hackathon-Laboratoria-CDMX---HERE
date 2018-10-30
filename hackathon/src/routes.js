@@ -5,6 +5,7 @@ import LandingPage from './Components/Global/LandingPage';
 import Form from './Components/Admin/Form';
 import Driver from './Components/Drivers/Home';
 import Parents from './Components/Parents/Home';
+import DashboardADM from './Components/Admin/Dashboard';
 
         const login = () => (
             <div>
@@ -36,6 +37,12 @@ import Parents from './Components/Parents/Home';
             </div>
         )
 
+        const dashboardAdmin = () => (
+            <div>
+                <DashboardADM />
+            </div>
+
+        )
 const Routes = () => (
     <Router basename={process.env.PUBLIC_URL}>      
             <Switch>
@@ -43,7 +50,8 @@ const Routes = () => (
                 <Route exact strict path="/login" component= {login} />
                 <Route exact strict path="/register-institution" component= {registerInstitution} />
                 <Route exact strict path="/driver" component = {driver} />
-                <Route exact strict path="/parents" component = {parents} />
+                <Route exact strict path="/parent" component = {parents} />
+                <Route exact strict path="/dashboard-admin" component = {dashboardAdmin} />
 
             </Switch>
     </Router>   
