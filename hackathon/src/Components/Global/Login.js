@@ -33,7 +33,8 @@ class loginInput extends Component {
     render() {
         return (
             <div className="background">
-                <div className='inputContainer'>
+            <div className='inputContainer'>
+
                 <form>
                     <Row className="white-background"> 
                         <Col s={12} m={12} l={12}>
