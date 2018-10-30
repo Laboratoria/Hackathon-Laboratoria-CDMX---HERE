@@ -14,7 +14,7 @@ class commentCard extends Component {
     
     componentDidMount() {
     let db = firebase.firestore();
-    db.collection('publicaciones').orderBy('date', 'desc').get()
+    db.collection('publicaciones').get()
     .then((querySnapshot) => {
             let allPosts = [];
             querySnapshot.forEach(function(doc) {

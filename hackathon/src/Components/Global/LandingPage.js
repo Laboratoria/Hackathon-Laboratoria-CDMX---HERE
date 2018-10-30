@@ -2,12 +2,14 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {Card, Row, Col} from 'react-materialize';
 import './LandingPage.css';
-import Chat from '../Parents/Chat';
 
 const landingPage = () => (
     <div>
         <div className="nav-links">
-            <Link to="/login">empresa | familia | institución</Link>
+            <Link to="/login-admin">empresa</Link>
+            <Link to="/login-parent">familia </Link>
+            <Link to="/login-school">institución</Link>
+            <Link to="/login-driver">choferes</Link>
         </div>
         <div className="banner">
         <section className="slogan">
@@ -37,7 +39,6 @@ const landingPage = () => (
             </Col>
         </Row>
         </section>
-        <Chat />
     </div>
 )
 

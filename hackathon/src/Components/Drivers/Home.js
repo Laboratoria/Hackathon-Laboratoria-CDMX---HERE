@@ -35,7 +35,7 @@ const DriverHome = () => (
     <Row>
         <Col s={12} m={12} l={12}>
             <Button>Reportes</Button>
-            <Button>Iniciar Ruta</Button>
+            <Button><Link to="/driver-route">Iniciar Ruta</Link></Button>
         </Col>
     </Row>
     </div>
