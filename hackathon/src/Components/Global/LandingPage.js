@@ -6,7 +6,7 @@ import './LandingPage.css';
 const landingPage = () => (
     <div>
         <div className="nav">
-            <Link to="/login">login</Link>
+            <Link to="/login">empresa | familia | institución</Link>
         </div>
         <div className="banner">
         <section className="slogan">

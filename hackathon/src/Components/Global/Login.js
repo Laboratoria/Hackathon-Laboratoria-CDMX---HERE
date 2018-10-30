@@ -32,7 +32,8 @@ class loginInput extends Component {
 
     render() {
         return (
-            <div className='inputContainer'>
+            <div className="background">
+                <div className='inputContainer'>
                 <form>
                     <Row className="white-background"> 
                         <Col s={12} m={12} l={12}>
@@ -47,10 +48,10 @@ class loginInput extends Component {
                     <Row className="white-background">
                     <Col s={12} m={12} l={12} className='center'>
                         <Button type='submit' onClick={this.login} s={10}  m={10} l={10} waves='light' className='signInButton'>Conectate</Button>
-                        <p className='signInWith center'>O puedes iniciar sesión con:</p>
                         </Col>
                     </Row>
                 </form>
+            </div>
             </div>
             )
     }
