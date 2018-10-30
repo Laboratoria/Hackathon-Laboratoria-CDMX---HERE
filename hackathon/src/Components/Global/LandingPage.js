@@ -6,7 +6,7 @@ import Chat from '../Parents/Chat';
 
 const landingPage = () => (
     <div>
-        <div className="nav">
+        <div className="nav-links">
             <Link to="/login">empresa | familia | institución</Link>
         </div>
         <div className="banner">
