@@ -34,6 +34,7 @@ class loginInput extends Component {
         return (
             <div className="background">
             <div className='inputContainer'>
+
                 <form>
                     <Row className="white-background"> 
                         <Col s={12} m={12} l={12}>
