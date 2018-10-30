@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import firebase from 'firebase'
-import {Row, Col, Card, Preloader} from 'react-materialize'
+import {Preloader} from 'react-materialize'
 
 
 class commentCard extends Component {
