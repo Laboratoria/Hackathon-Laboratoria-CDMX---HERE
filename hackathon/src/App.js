@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Routes from '../src/routes';
+// import Routes from '../src/routes';
+import MapHere from './Components/Driver/Map/Map';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Routes />
+        <MapHere />
       </div>
     );
   }
