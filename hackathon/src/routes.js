@@ -9,6 +9,9 @@ import Form from './Components/Admin/Form';
 import Driver from './Components/Drivers/Home';
 import Parents from './Components/Parents/Home';
 import DashboardADM from './Components/Admin/Dashboard';
+import DriverRoute from './Components/Drivers/StartRoute';
+import ParentRoute from './Components/Parents/ParentRoute';
+import DashboardSchool from './Components/Institutions/Dashboard';
 
         const loginParent = () => (
             <div>
@@ -63,6 +66,25 @@ import DashboardADM from './Components/Admin/Dashboard';
             </div>
 
         )
+
+        const dashboardSchool = () => (
+            <div>
+                <DashboardSchool />
+            </div>
+
+        )
+        const driverRoute = () => (
+            <div>
+                <DriverRoute />
+            </div>
+        )
+
+        const parentRoute = () => (
+            <div>
+                <ParentRoute />
+            </div>
+        )
+
 const Routes = () => (
     <Router basename={process.env.PUBLIC_URL}>      
             <Switch>
@@ -75,6 +97,11 @@ const Routes = () => (
                 <Route exact strict path="/driver" component = {driver} />
                 <Route exact strict path="/parent" component = {parents} />
                 <Route exact strict path="/dashboard-admin" component = {dashboardAdmin} />
+                <Route exact strict path="/driver-route" component = {driverRoute} />
+                <Route exact strict path="/parent-route" component = {parentRoute} />
+                <Route exact strict path="/dashboard-school" component = {dashboardSchool} />
+
+
 
             </Switch>
     </Router>   

@@ -48,10 +48,9 @@ class Form extends Component {
         </Row>
         <Row>
         <Modal
-            header='Modal Header'
+            header='Registra Nuevo Usuario Escuela'
             trigger={<Button>Registrar</Button>}>
                     <Col>
-                        <h5>Registra Nueva Escuela</h5>
                         <Input type="email" label="email" name="email" value={this.state.email} onChange={this.handleOnChange}/>
                         <Input type="password" label="password" name="password" value={this.state.password} onChange={this.handleOnChange}/>
                         <Button onClick={this.handleRegister}>Confirmar</Button>

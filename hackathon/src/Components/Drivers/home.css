@@ -13,3 +13,12 @@ select {
 .black-letter {
     color: black;
 }
+
+.pending {
+    color: #F8DBB4;
+}
+
+.actual {
+    color: #C7C3FA;
+}
+

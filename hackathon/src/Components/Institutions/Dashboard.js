@@ -1,10 +1,12 @@
 import React from 'react';
-import {Row, Col, Input, Button, Navbar, NavItem, Icon, Dropdown} from 'react-materialize';
+import {Tabs, Tab, Row, Col, NavItem, Navbar, Icon, Button, Dropdown} from 'react-materialize';
 import {Link} from 'react-router-dom';
 import firebase from 'firebase';
-import '../Drivers/home.css'
+import SchoolTable from '../Admin/SchoolTable';
+import Form from '../Admin/Form';
+import '../Admin/Dashboard.css';
 
-const parentsHome = () => (
+const DashboardTabs = () => (
     <div>
     <Navbar brand='' right>
         <NavItem><Dropdown trigger={
@@ -17,17 +19,18 @@ const parentsHome = () => (
 <NavItem onClick={() => firebase.auth().signOut()}><Link to="/" className="black-letter">Salir</Link></NavItem>
 </Dropdown></NavItem>
     </Navbar>
-    <div className ="inputContainer">
+
+    <div className="container">
     <Row>
         <Col s={12} m={12} l={12}>
-            <Input type="text" placeholder="Agregar Hijx"></Input>
-            <p>Daniel Mejía Flores</p>
-            <p>Linda Mejía Flores</p>
-            <Icon><Link to="/parent-route">arrow_forward</Link></Icon>
-        </Col>
-    </Row>
-    </div>
-    </div>
+    <Tabs className='tab-demo z-depth-1'>
+    <Tab title="Registrar Chofer"><Form /></Tab>
+    <Tab title="Choferes" active><SchoolTable /></Tab>
+</Tabs>
+</Col>
+</Row>
+</div>
+</div>
 )
 
-export default parentsHome
+export default DashboardTabs
