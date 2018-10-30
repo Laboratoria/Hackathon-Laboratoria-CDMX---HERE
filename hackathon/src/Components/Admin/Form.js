@@ -1,53 +1,65 @@
-import React from 'react';
-// eslint-disable-next-line
-import {Row, Input, Button, Col} from 'react-materialize';
+import React, {Component} from 'react';
+import {Row, Input, Button, Modal, Col} from 'react-materialize';
+import firebase from 'firebase';
 
-const Form = () => (
-    <div className='inputContainer'>
+class Form extends Component {
+    constructor() {
+        super();
+        this.handleOnChange = this.handleOnChange.bind(this);
+        this.handleRegister = this.handleRegister.bind(this);
+        
+        this.state = {
+        email: '',
+        password: '',
+
+        }
+    }
+
+    handleRegister(event) {
+        event.preventDefault();
+        firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
+        .then((user) => {
+            if(user) {
+             window.location.assign('/dashboard-admin')
+            }
+        }).catch((error) => {
+            let errorCode = error.code;
+            let errorMessage = error.message;
+            if (errorCode === 'auth/weak-password') {
+              alert('The password is too weak.');
+            } else {
+              alert(errorMessage);
+            }
+          });
+    }
     
-                <form>
-                    <Row className="white-background"> 
-                        <Col s={12} m={12} l={12}>
-                        <Input className='inputHover' s={10}  m={10} l={10} label="School Code" name="school-code" type="text"></Input>
-                        </Col>
-                    </Row>
-                    <Row className="white-background"> 
-                        <Col s={12} m={12} l={12}>
-                        <Input className='inputHover' s={10}  m={10} l={10} label="Student's Full name" name="student-full-name" type="text"></Input>
-                        </Col>
-                    </Row>
-                    <Row className="white-background">
-                    <Col s={12} m={12} l={12}>
-                        <Input className='inputHover' s={10}  m={10} l={10} label="Tutor's Full Name" name="tutor-full-name" type="text"></Input>
+    handleOnChange(event) {
+        this.setState({ [event.target.name]: event.target.value})
+    }
+    render() {
+        return(
+    <div>
+        <Row>
+            <Input placeholder="Placeholder" s={6} label="First Name" />
+            <Input s={6} label="Last Name" />
+            <Input s={12} label="disabled" defaultValue="I am not editable" disabled />
+            <Input type="password" label="password" s={12} />
+            <Input type="email" label="Email" s={12} />
+        </Row>
+        <Row>
+        <Modal
+            header='Registra Nuevo Usuario Escuela'
+            trigger={<Button>Registrar</Button>}>
+                    <Col>
+                        <Input type="email" label="email" name="email" value={this.state.email} onChange={this.handleOnChange}/>
+                        <Input type="password" label="password" name="password" value={this.state.password} onChange={this.handleOnChange}/>
+                        <Button onClick={this.handleRegister}>Confirmar</Button>
                     </Col>
-                    </Row >
-                    <Row className="white-background">
-                    <Col s={12} m={12} l={12}>
-                        <Input className='inputHover' s={10}  m={10} l={10} label="Student ID" name="student-ID" type="text"></Input>
-                    </Col>
-                    </Row >
-                    <Row className="white-background">
-                    <Col s={12} m={12} l={12}>
-                        <Input className='inputHover' s={10}  m={10} l={10} label="Email" name='email' type='email' validate></Input>
-                    </Col>
-                    </Row >
-                    <Row className="white-background">
-                    <Col s={12} m={12} l={12}>
-                        <Input className='inputHover' s={10}  m={10} l={10} label="New Password" name="new-password" type="password" validate></Input>
-                    </Col>
-                    </Row >
-                    <Row className="white-background">
-                    <Col s={12} m={12} l={12}>
-                        <Input className='inputHover' s={10}  m={10} l={10} label="Confirm Password" name="confirm-password" type="password" validate></Input>
-                    </Col>
-                    </Row >
-                    <Row className="white-background">
-                    <Col s={12} m={12} l={12} className='center'>
-                        <Button type='submit' s={10}  m={10} l={10} waves='light' className="signUpButton">Submit</Button>
-                        </Col>
-                    </Row>
-        </form>
+        </Modal>
+        </Row>
     </div>
-)
+        )
+    }
+}
 
 export default Form
