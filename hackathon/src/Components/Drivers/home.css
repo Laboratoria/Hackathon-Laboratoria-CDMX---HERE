@@ -1,0 +1,15 @@
+nav .nav-wrapper {
+    background-color: black;
+}
+
+select {
+    display: block;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    color: black;
+}
+
+.black-letter {
+    color: black;
+}

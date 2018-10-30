@@ -1,0 +1,13 @@
+.input {
+    margin-top: 150%;
+    width: 90%;
+    margin-left: 4%;
+}
+
+.btn {
+    background-color: black;
+}
+
+.chatMessages p {
+    margin-bottom: -10%;
+}
