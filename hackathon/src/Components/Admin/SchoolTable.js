@@ -16,17 +16,17 @@ const schoolTable = () => (
     <tr>
       <td>Escuela 01</td>
       <td>Dirección #301</td>
-      <td>1234567890</td>
+      <td>1234567891</td>
     </tr>
     <tr>
       <td>Escuela 02</td>
       <td>Dirección #302</td>
-      <td>1234567890</td>
+      <td>1234567892</td>
     </tr>
     <tr>
       <td>Escuela 03</td>
       <td>Dirección #303</td>
-      <td>1234567890</td>
+      <td>1234567893</td>
     </tr>
   </tbody>
 </Table>
