@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Row, Input, Button, Col} from 'react-materialize';
 import Firebase from '../../config';
-import './Login.css';
+import '../Global/Login.css';
 
 class loginInput extends Component {
     constructor(props) {
@@ -18,7 +18,7 @@ class loginInput extends Component {
         event.preventDefault();
         Firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
         .then((user) => {
-            window.location.assign('/parent');
+            window.location.assign('/dashboard-school');
         }).catch((err) => {
             alert(err.code);
         });
@@ -34,8 +34,8 @@ class loginInput extends Component {
             <div className='inputContainer'>
 
                 <form>
+                    Escuela
                     <Row className="white-background"> 
-                    Padres
                         <Col s={12} m={12} l={12}>
                         <Input value={this.state.email} onChange={this.handleOnChange} className='inputHover' s={10}  m={10} l={10} label="Email" name='email' type='email' validate></Input>
                         </Col>

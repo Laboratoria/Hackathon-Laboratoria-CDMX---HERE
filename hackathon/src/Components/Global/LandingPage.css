@@ -31,11 +31,12 @@ h5 {
     height: 250px;    
 }
 
-.nav,
-.nav a {
+.nav-links,
+.nav-links a {
     background-color: black;
     text-align: right;
     color: white;
-    text-decoration: none;
+    position: relative;
+    z-index: 4;
     margin-right: 2%;
 }
