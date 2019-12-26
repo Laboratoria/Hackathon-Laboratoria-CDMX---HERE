@@ -1,0 +1,24 @@
+nav .nav-wrapper {
+    background-color: black;
+}
+
+select {
+    display: block;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    color: black;
+}
+
+.black-letter {
+    color: black;
+}
+
+.pending {
+    color: #F8DBB4;
+}
+
+.actual {
+    color: #C7C3FA;
+}
+
